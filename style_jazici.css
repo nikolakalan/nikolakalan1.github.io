@@ -1,0 +1,44 @@
+html {
+    height: auto !important;
+  }
+  
+
+  
+  body {
+    top: 0 !important;
+    position: static !important;
+  }
+  
+  .skiptranslate {
+    display: none !important;
+  }
+  
+
+  
+  .goog-text-highlight {
+    background-color: inherit;
+    box-shadow: none;
+    box-sizing: inherit;
+  }
+  
+
+  
+  .language {
+    position: fixed;
+    left: 100px;
+    top: 10%;
+    transform: translateY(-50%);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .languageimg {
+    margin: 2px;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  
+  .languageimg:hover, .language__img_active {
+    opacity: 1;
+  }

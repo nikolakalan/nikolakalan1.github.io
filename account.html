@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
+    <script src="path/to/js.cookie.min.js"></script>
+    <title>Account | MegaTek</title>
+    <link rel="stylesheet" href="style_account.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
+<link rel="shortcut icon" type="image/jpg" href="images/018a4958e60089404d6b22f7521b04951.png"/>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html" class="logo"><img src="images/018a4958e60089404d6b22f7521b0495.png" width="250px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Дома</a></li>
+                    <li><a href="products.html">Продукти</a></li>
+                    <li><a href="about.html">За нас</a></li>
+                    <li><a href="contact.html">Контакт</a></li>
+                    <li><a href="account.html">Најавете се</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images/cart.png" width="30px" height="30px" style="filter: invert(100%);"></a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            <div class="znaminja">
+                <img src="images/MK (1).svg" alt="ru" data-google-lang="mk" id="mkd" class="language__img" width="30px">
+                <img src="images/GB-UKM.svg" alt="en" data-google-lang="en" id="eng" class="language__img" width="30px">
+            </div>
+    </div>
+    </div>
+
+    <!-- Account Page -->
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/1698358554-h6-flow-promo-banner-primary-lg.avif" width="100%">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Најави се</span>
+                            <span onclick="register()">Регистрирајсе</span>
+                            <hr id="Indicator">
+                        </div>
+                        <form id="LoginForm">
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Најави се</button>
+                            <a href="">Заборавена лозинка?</a>
+                        </form>
+
+                        <form id="RegForm">
+                            <input type="text" placeholder="Username">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Регистрирај се</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <a href="index.html" class="logo"><img src="images/018a4958e60089404d6b22f7521b0495.png" width="250px"></a>
+                    <p>Нашата цел е да обезбедиме лесен и пристапен начин за купување на квалитетни компјутерски делови и опрема.
+                    </p>
+                </div>
+                <div class="footer-col-2">
+                    
+                </div>
+                <div class="footer-col-3">
+                    <h3>Линкови</h3>
+                    <ul>
+                        <li><a href="index.html" style="color: gray;">Дома</a></li>
+                        <li><a href="products.html" style="color: gray;">Продукти</a></li>
+                        <li><a href="cart.html" style="color: gray;">Кошничка</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Корисно</h3>
+                    <ul>
+                        <li><a href="about.html" style="color: gray;">За нас</a></li>
+                        <li><a href="contact.html" style="color: gray;">Контакт</a></li>
+                        <li><a href="account.html" style="color: gray;">Најавете се</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">2024 - Никола Каланоски</p>
+        </div>
+    </div>
+
+    <!-- javascript -->
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px"
+            }
+            else {
+                MenuItems.style.maxHeight = "0px"
+            }
+        }
+    </script>
+
+    <!-- Toggle Form -->
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+        function register() {
+            RegForm.style.transform = "translatex(0px)";
+            LoginForm.style.transform = "translatex(0px)";
+            Indicator.style.transform = "translateX(100px)";
+
+        }
+        function login() {
+            RegForm.style.transform = "translatex(300px)";
+            LoginForm.style.transform = "translatex(300px)";
+            Indicator.style.transform = "translate(0px)";
+
+        }
+    </script>
+<script src="script_jazici.js"></script>
+</body>
+
+</html>

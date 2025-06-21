@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
+    <script src="path/to/js.cookie.min.js"></script>
+    <title>About | MegaTek</title>
+    <link rel="stylesheet" href="style_about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
+<link rel="shortcut icon" type="image/jpg" href="images/018a4958e60089404d6b22f7521b04951.png"/>
+</head>
+
+<body>
+    
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html" class="logo"><img src="images/018a4958e60089404d6b22f7521b0495.png" width="250px"></a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Дома</a></li>
+                        <li><a href="products.html">Продукти</a></li>
+                        <li><a href="about.html">За нас</a></li>
+                        <li><a href="contact.html">Контакт</a></li>
+                        <li><a href="account.html">Најавете се</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html"><img src="images/cart.png" width="30px" height="30px" style="filter: invert(100%);"></a>
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+                <div class="znaminja">
+                    <img src="images/MK (1).svg" alt="ru" data-google-lang="mk" id="mkd" class="language__img" width="30px">
+                    <img src="images/GB-UKM.svg" alt="en" data-google-lang="en" id="eng" class="language__img" width="30px">
+                </div>
+            </div>
+            
+            <div class="about">
+                <p>
+                    Добредојдовте на нашиот веб-сајт, вашиот прв избор за компјутерски делови и опрема! Ние сме тим со страст за технологија и цел да им ги обезбедиме на нашите корисници најдобрите производи и услуги за подобрување на нивните компјутерски системи. Со години на искуство во индустријата, нашето знаење и експертиза се заложени за да ви обезбедат само најдоброто. Нашата платформа пружа уникатна комбинација на најсовремените компјутерски делови, иновативни производи и одлични понуди, прилагодени на вашите потреби и буџет. Веруваме во квалитетот и нудиме само врвни брендови кои гарантираат стабилност и ефикасност. Од нашата услуги кон корисниците до брзата испорака, нашето вовлекување во секој детал од вашето искуство со нас го прави неповторливо. Сакаме да ви обезбедиме повеќе од продукти - сакаме да ви обезбедиме решение, искуство и заедница на ентузијасти. Ние сме тука за да ви помогнеме да го освежите и подобрите вашите компјутерски системи.  Благодариме ви што сте дел од нашата заедница!</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <a href="index.html" class="logo"><img src="images/018a4958e60089404d6b22f7521b0495.png" width="250px"></a>
+                    <p>Нашата цел е да обезбедиме лесен и пристапен начин за купување на квалитетни компјутерски делови и опрема.
+                    </p>
+                </div>
+                <div class="footer-col-2">
+                    
+                </div>
+                <div class="footer-col-3">
+                    <h3>Линкови</h3>
+                    <ul>
+                        <li><a href="index.html" style="color: gray;">Дома</a></li>
+                        <li><a href="products.html" style="color: gray;">Продукти</a></li>
+                        <li><a href="cart.html" style="color: gray;">Кошничка</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Корисно</h3>
+                    <ul>
+                        <li><a href="about.html" style="color: gray;">За нас</a></li>
+                        <li><a href="contact.html" style="color: gray;">Контакт</a></li>
+                        <li><a href="account.html" style="color: gray;">Најавете се</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">2024 - Никола Каланоски</p>
+        </div>
+    </div>
+
+    <!-- javascript -->
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px"
+            }
+            else {
+                MenuItems.style.maxHeight = "0px"
+            }
+        }
+
+        const navbar = document.querySelector('#navbar');
+let top = navbar.offsetTop;
+function stickynavbar() {
+  if (window.scrollY >= top) {    
+    navbar.classList.add('sticky');
+  } else {
+    navbar.classList.remove('sticky');    
+  }
+}
+window.addEventListener('scroll', stickynavbar);
+    </script>
+<script src="script_jazici.js"></script>
+</body>
+
+</html>
